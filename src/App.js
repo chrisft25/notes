@@ -43,7 +43,7 @@ componentDidMount(){
 
   this.db.on('child_removed',snap=>{
     for(let i=0;i<notes.length;i++){
-      if(notes[i].noteId==snap.key){
+      if(notes[i].noteId===snap.key){
         notes.splice(i,1);
       }
     }
